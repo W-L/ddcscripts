@@ -5,6 +5,9 @@ easy CLI control of monitor settings using ddccontrol
 1. install ddccontrol from the official repos
 2. don't use the clumsy GUI - instead use the scripts in here 
 3. create startmenu entries that run in this dir and execute in terminal
+
+	- drop the .desktop files into `/home/USER/.local/share/applications/`
+	
 4. create a ddc user group so these don't have to be run as sudo
 
 	- check which i2c device the monitor is `ddccontrol -p`
