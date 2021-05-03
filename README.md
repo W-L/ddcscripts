@@ -31,14 +31,17 @@ crw-rw----  1 root ddc      89,  10 Jan 20 15:49 i2c-XX
 
 8. create group and add user
 
-`groupadd ddc`
-`usermod -a -G ddc userName`
-`su - userName`
+	- `groupadd ddc`
+	- `usermod -a -G ddc userName`
+	- `su - userName`
 
 Alternatively add user to i2c group:
+
 `sudo usermod USER -aG i2c`
+
 but is security risk on multiuser system I guess
 
 
 following `https://frdmtoplay.com/using-ddccontrol-as-a-non-root-user/`
+
 ddccontrol docs: `http://ddccontrol.sourceforge.net/doc/ddccontrol-0.4.pdf`
