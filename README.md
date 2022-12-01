@@ -48,3 +48,16 @@ but is security risk on multiuser system I guess
 following `https://frdmtoplay.com/using-ddccontrol-as-a-non-root-user/`
 
 ddccontrol docs: `http://ddccontrol.sourceforge.net/doc/ddccontrol-0.4.pdf`
+
+
+# after jammy update
+
+the i2c device number seems to be changing with every reboot, so the solution above does not work anymore
+
+there's a discussion at https://bbs.archlinux.org/viewtopic.php?id=278556
+
+the final solution in that forum was to use:
+
+
+`ddccontrol dev:/dev/$(basename /sys/devices/pci*/*/drm/card0/card0-DP-2/i2c-*) ... `
+
