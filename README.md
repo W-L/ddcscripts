@@ -8,5 +8,9 @@ since ddcutil can now work without requiring sudo, it is much easier than ddccon
 ```
 cp *.desktop /home/USER/.local/share/applications/
 ```
-	
+
+ 
+ddcutil requires kernel module i2c-dev. If it is not built into your kernel, it must be loaded explicly. To do so, add a file into directory /etc/modules-load.d with the single line:
+
+i2c-dev
 
